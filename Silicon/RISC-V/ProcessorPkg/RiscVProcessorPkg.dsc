@@ -44,6 +44,7 @@
   RiscVCpuLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVCpuLib/RiscVCpuLib.inf
   RiscVEdk2SbiLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVEdk2SbiLib/RiscVEdk2SbiLib.inf
   RiscVOpensbiLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVOpensbiLib/RiscVOpensbiLib.inf
+  TimerLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVTimerLib/BaseRiscVTimerLib.inf
   MachineModeTimerLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVReadMachineModeTimer/MachineModeTimerLib/MachineModeTimerLib.inf
   #MachineModeTimerLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVReadMachineModeTimer/EmulatedMachineModeTimerLib/EmulatedMachineModeTimerLib.inf
   BaseLib|MdePkg/Library/BaseLib/BaseLib.inf
@@ -81,16 +82,20 @@
   PeimEntryPoint|MdePkg/Library/PeimEntryPoint/PeimEntryPoint.inf
 
 [LibraryClasses.common.DXE_CORE]
+  TimerLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVTimerLib/BaseRiscVTimerLib.inf
 
 [LibraryClasses.common.DXE_DRIVER]
   PcdLib|MdePkg/Library/DxePcdLib/DxePcdLib.inf
   PlatformBootManagerLib|Platform/RISC-V/PlatformPkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf
 
 [LibraryClasses.common.DXE_RUNTIME_DRIVER]
+  TimerLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVTimerLib/BaseRiscVTimerLib.inf
 
 [LibraryClasses.common.UEFI_DRIVER]
+  TimerLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVTimerLib/BaseRiscVTimerLib.inf
 
 [Components]
+  Silicon/RISC-V/ProcessorPkg/Library/RiscVTimerLib/BaseRiscVTimerLib.inf
   Silicon/RISC-V/ProcessorPkg/Library/RiscVExceptionLib/CpuExceptionHandlerDxeLib.inf
   Silicon/RISC-V/ProcessorPkg/Library/RiscVFirmwareContextSbiLib/RiscVFirmwareContextSbiLib.inf
   Silicon/RISC-V/ProcessorPkg/Library/PeiServicesTablePointerLibOpenSbi/PeiServicesTablePointerLibOpenSbi.inf

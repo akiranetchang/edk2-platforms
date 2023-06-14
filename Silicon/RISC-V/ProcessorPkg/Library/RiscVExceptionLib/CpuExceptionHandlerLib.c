@@ -102,10 +102,14 @@ RiscVSupervisorModeTrapHandler (
     //
     // This is interrupt event.
     //
+#ifdef RISCV_TODO	
     SCause &= ~(1UL << (sizeof (UINTN) * 8- 1));
     if ((SCause == SCAUSE_SUPERVISOR_TIMER_INT) && (mInterruptHandlers[EXCEPT_RISCV_TIMER_INT] != NULL)) {
       mInterruptHandlers[EXCEPT_RISCV_TIMER_INT](EXCEPT_RISCV_TIMER_INT, RiscVSystemContext);
     }
+#else
+;;	
+#endif
   }
 }
 
